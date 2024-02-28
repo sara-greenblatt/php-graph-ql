@@ -1,0 +1,35 @@
+{
+   "query1": "query {users {    user_id  } user(id: 1) {userName} }",
+   "query": "_ _schema {      queryType {        fields {          name }      }    }"
+}
+
+server created {
+   "data": {
+       "__schema": {
+           "queryType": {
+               "fields": [
+                   {
+                       "name": "users",
+                       "description": null,
+                       "type": {
+                           "name": null,
+                           "kind": "LIST"
+                       }
+                   },
+                   {
+                       "name": "user",
+                       "description": null,
+                       "type": {
+                           "name": "User",
+                           "kind": "OBJECT"
+                       }
+                   }
+               ]
+           }
+       }
+   }
+}
+
+// relay
+auto generation of the _schema
+get-graphql-schema http://localhost:9000 > C:\Users\user1\Desktop\SARI\react\company-branches\client\schema.graphql -j

@@ -1,0 +1,17 @@
+{
+    "name": "sara/graphql-php",
+    "description": "graph-ql",
+    "require": {
+        "webonyx/graphql-php": "^15.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Application\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sara-Greenblatt"
+        }
+    ]
+}
